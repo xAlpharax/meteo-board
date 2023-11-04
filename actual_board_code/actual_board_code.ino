@@ -5,6 +5,12 @@
 
 #include "DHT.h"
 
+// #include "WiFi.h" // working with wifi, might interfere with pins (or so it seemed)
+
+// #include "Arduino.h"
+// #include "HTTPClient.h" // HTTP Handling
+// #include "ArduinoJson.h" // JSON Handling
+
 // CONFIGURATION
 
 // DHT PINS
@@ -35,6 +41,12 @@ float ratio = 0;
 float concentration = 0;
 uint32_t delayMS = 1000; // in loop delay() explicited
 
+// WiFI stuff
+
+const char* ssid = "Stefan's Galaxy A52s 5G";
+const char* password = "12345678";
+const char* apiEndpoint = "";
+
 
 // Initialize DHT Sensor. The current DHT reading algorithm adjusts itself to work on faster procs. (rtfm --> docs)
 DHT dht(DHTPIN, DHTTYPE);
@@ -42,6 +54,13 @@ DHT dht(DHTPIN, DHTTYPE);
 
 void setup() { // Setup code that gets run regardless
   Serial.begin(9600);
+
+  // WiFi.begin(ssid, password); // WiFi configuration at startup
+  // while (WiFi.status() != WL_CONNECTED) {
+  //   delay(1000);
+  //   Serial.println("Connecting to WiFi...");
+  // }
+  // Serial.println("Connected to WiFi");
 
   Serial.println(F("----- DHT + MQ + DSM Interface -----"));
 
@@ -92,8 +111,7 @@ void loop() { // Main code
   // vvv MQ135 MEASUREMENTS SECTION vvv //
 
   Serial.println(analogRead(15)); // MQ135 Sensor - ppm metrics (raw)
-  Serial.println("ppm")
-
+  Serial.println(F("^ppm^"));
  // vvv DSM501A MEASUREMENTS SECTION vvv //
 
   duration = pulseIn(DSM501, LOW);
