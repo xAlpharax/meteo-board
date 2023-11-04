@@ -45,19 +45,18 @@ void loop()
   endtime = millis();
   if ((endtime-starttime) > sampletime_ms) //Only after 30s has passed we calcualte the ratio
   {
-    /*
-    ratio1 = (lowpulseoccupancy/1000000.0)/30.0*100.0; //Calculate the ratio
-    Serial.print("ratio1: ");
-    Serial.println(ratio1);
+    // ratio1 = (lowpulseoccupancy/1000000.0)/30.0*100.0; //Calculate the ratio
+    // Serial.print("ratio1: ");
+    // Serial.println(ratio1);
     
-    concentration = 0.001915 * pow(ratio1,2) + 0.09522 * ratio1 - 0.04884;//Calculate the mg/m3
-    */
+    // concentration = 0.001915 * pow(ratio1,2) + 0.09522 * ratio1 - 0.04884;//Calculate the mg/m3
+
     float conPM1 = calculateConcentration(lowpulseoccupancyPM1,30);
     float conPM25 = calculateConcentration(lowpulseoccupancyPM25,30);
     Serial.print("PM1 ");
     Serial.print(conPM1);
     Serial.print("  PM25 ");
-    Serial.println(conPM25);
+    Serial.println(conPM25); // this is pretty negative:)
     lowpulseoccupancyPM1 = 0;
     lowpulseoccupancyPM25 = 0;
     starttime = millis();

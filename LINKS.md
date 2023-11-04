@@ -15,6 +15,8 @@ DATABASE CONTENDERRRRRRRRRRRRRRRr:
 https://cassandra.apache.org/_/quickstart.html -- i like this containarization
 https://graphql.org/ - graphs dbs
 
+FORGET THAT ; DO FIREBASE --> Flutter for android, ios, web
+
 SOME OTHER THINGS I VE SEEN:
 
 https://github.com/expressjs/express
