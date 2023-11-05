@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443484865448",
+    "project_id": "meteo-board",
+    "storage_bucket": "meteo-board.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443484865448:android:896502083b5ab60d5c539d",
+        "android_client_info": {
+          "package_name": "com.example.client_app_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAY0cu67hMFb_5BHj3iG9afj73d_7UMSY0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
