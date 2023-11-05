@@ -1,0 +1,91 @@
+Meteo Board
+
+Code-Envision 2023
+
+Repo: https://github.com/xAlpharax/meteo-board
+Legenda: "*" = aspecte asupra carora vom reveni
+
+Problematica propusa:
+Metode de monitorizare, centralizare* si democratizare a datelor
+ce tin de calitatea aerului din mediul urban si nu numai.
+
+Problematica extinsa:
+Vizualizare comprehensiva si intuitiva a cantitatii mari, coplesitoare
+de date provenite de la senzori, imbunatatita prin prezenta unor metrici
+dar si a unor predictii cu privire la evolutia sistemului monitorizat
+folosind Inteligenta Artificiala sau IA in tandem cu o interfata
+prietenoasa, accesibila de pe platformele majore (android, ios, web).
+
+Abordare:
+    - Hardware*
+    - Software
+
+Partea de Hardware.
+Componentele urmatoare au fost furnizate de catre organizatori:
+    - ESP32 30-pini - placa principala - contine modul WiFi
+    - DHT Sensor - senzor de temperatura si umiditate
+    - MQ135 Sensor - senzor de detectare a gazelor/aerosolilor
+                   - poate masura parti la milion de CO2
+                   si alti compusi nocivi din aer
+    - DSM501A Sensor - senzor de detectie a prafului si fumului
+
+Aceste componente sunt instrumente stiintifice, iar, ca atare,
+datele citite nu pot fi luate in calcul decat in urma unor teste.
+
+Partea de Hardware.
+Componente conectoare: Breadboard, Cabluri Jumper.
+Toate aceste componente au fost accesate si utilizate conform
+procedurilor de interfata cu portul serial al placii principale.
+Astfel, urmatoarele imagini detaliaza modul de asamblare:
+
+@../images/ESP32-Pinout-Diagram-board.png
+
+@../images/ESP32-board.png
+
+@../images/ESP32-Specs.png
+
+@../images/DHT-temp-hum-sensor.jpg
+
+@../images/MQ135-gas-sensor.jpg
+
+@../images/DSM501A-air-dust-smoke-sensor.jpg
+
+@../images/arduino-logo.png
+
+@../images/cpp-logo.png
+
+Partea de Software.
+Datele preluate au urmat un drum cathartic spre o baza
+de date CRUD (Create, Read, Update and Delete) de unde
+au putut fi servite prin diferite tehnologii la utilizatori.
+
+@../images/android-studio-logo.png
+
+@../images/dart-game-logo.png
+
+@../images/dart-logo.png
+
+@../images/flutter-logo.png
+
+@../images/dart-kotlin-swift-logos.png
+
+@../images/firebase-logo.png
+
+Toate aceste tehnologii au jucat roluri importante in realizarea produsului.
+De asemenea, aplicatiile au fost dezvoltate in mediul, sistemul de operare Linux.
+
+@../images/linux-logo.jpg
+
+@../images/void-linux-logo.png
+
+Deoarece timpul a fost limitat, partea de vizualizare a datelor si explicitare a acestora,
+eventual, a realizarii unor predictii coerente asupra datelor pentru a prezice ritmul de
+dezvoltare a calitatii aerului. In schimb, urmatoarele tehnologii ar mai fi putut fi folosite:
+
+@../images/python-logo.png
+
+@../images/pytorch-logo.png
+
+@../images/tensorflow-logo.png
+
+Multumesc pentru timpul acordat.

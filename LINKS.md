@@ -21,6 +21,7 @@ https://www.gradio.app/ - another contender that was considered (somewhat, but n
 FORGET THAT ; DO FIREBASE --> Flutter for android, ios, web --> IS WORKING (doing -> deadline)
 https://firebase.google.com/docs/flutter/setup --> AYYYYYY
 https://firebase.google.com/docs/database/flutter/read-and-write -- real time database with firebase (rtdb)
+https://console.firebase.google.com/u/0/project/meteo-board/database/meteo-board-default-rtdb/data/~2F -- crud (create, read, update and delete) db dashboard
 
 SOME OTHER THINGS I VE SEEN:
 
