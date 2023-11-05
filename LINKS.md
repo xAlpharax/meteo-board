@@ -18,8 +18,9 @@ https://cassandra.apache.org/_/quickstart.html -- i like this containarization
 https://graphql.org/ - graphs dbs
 https://www.gradio.app/ - another contender that was considered (somewhat, but not exactly what was needed)
 
-FORGET THAT ; DO FIREBASE --> Flutter for android, ios, web --> IS WORKING (doing)
+FORGET THAT ; DO FIREBASE --> Flutter for android, ios, web --> IS WORKING (doing -> deadline)
 https://firebase.google.com/docs/flutter/setup --> AYYYYYY
+https://firebase.google.com/docs/database/flutter/read-and-write -- real time database with firebase (rtdb)
 
 SOME OTHER THINGS I VE SEEN:
 

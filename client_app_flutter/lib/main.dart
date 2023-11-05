@@ -64,7 +64,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  FirebaseDatabase database = FirebaseDatabase.instance;
+  // FirebaseDatabase database = FirebaseDatabase.instance;
+  // DatabaseReference ref = FirebaseDatabase.instance.ref().child('temperature');
   // final ref = FirebaseDatabase.instance.ref();
 
   int _counter = 0;
@@ -76,7 +77,14 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+      // ref.onValue.listen(
+      //       (event) {
+      //     setState(() {
+      //       _counter = event.snapshot.value as int;
+      //     });
+      //   },
+      // );
+      // _counter++;
       // final snapshot = await ref.child('temperature').get();
       // final snapshot = database.ref().child('temperature').get();
       // if (snapshot.exists) {
@@ -93,7 +101,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
-    //
+
+    DatabaseReference ref = FirebaseDatabase.instance.ref().child('temperature');
+    ref.onValue.listen(
+          (event) {
+        setState(() {
+          _counter = event.snapshot.value as int;
+        });
+      },
+    );
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
