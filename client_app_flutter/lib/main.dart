@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
       // called again, and so nothing would appear to happen.
       _counter++;
       // final snapshot = await ref.child('temperature').get();
-      final snapshot = database.ref().child('temperature').get();
+      // final snapshot = database.ref().child('temperature').get();
       // if (snapshot.exists) {
       //   print(snapshot.value);
       //   var _counter = snapshot.value;
