@@ -3,9 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:client_app_flutter/firebase_options.dart';
 
+import 'package:firebase_database/firebase_database.dart';
+
 Future <void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
+  // FirebaseDatabase database = FirebaseDatabase.instance;
   runApp(const MyApp());
 }
 
@@ -60,6 +64,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  FirebaseDatabase database = FirebaseDatabase.instance;
   int _counter = 0;
 
   void _incrementCounter() {
@@ -69,7 +74,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter++;
+      // _counter++;
+      _counter = database.hashCode;
     });
   }
 
