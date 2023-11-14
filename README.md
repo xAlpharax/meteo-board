@@ -1,5 +1,5 @@
 # meteo-board
-Code and Notes all throughout the competition https://code-envision.ro
+My Code and Notes all throughout the competition https://code-envision.ro (achieved 2nd place)
 
 ## Task
 
